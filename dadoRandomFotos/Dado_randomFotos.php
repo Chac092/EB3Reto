@@ -36,5 +36,30 @@
         }
     
     ?>
+
+<?php 
+        $NumeroRandom = rand (1,6); 
+        switch ($NumeroRandom) {
+            case 1:
+                echo "<img src='".$dado1."' />";
+                break;
+            case 2:
+                echo "<img src='".$dado2."' />";
+                break;
+            case 3:
+                echo "<img src='".$dado3."' />";
+                break;
+            case 4:
+                echo "<img src='".$dado4."' />";
+                break;
+            case 5:
+                echo "<img src='".$dado5."' />";
+                break;
+            case 6:
+                echo "<img src='".$dado6."' />";
+                break;
+        }
+    
+    ?>
 </body>
 </html>
