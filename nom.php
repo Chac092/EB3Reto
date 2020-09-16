@@ -1,9 +1,10 @@
 <?php
 //Este PHP sirve para visualizar lo escrito en el anterior
 $nombre = $_POST['nombre'];
-    if($nombre != ""){
-        echo "<p>Escribiste --> $nombre</p>";
+$apellido = $_POST['apellido'];
+    if($nombre == "Antonio"|| $apellido=="Ruiz Santos"){
+        print "Bienvenido ". $nombre." ". $apellido. " que pase un buen dia";
     }else{
-        print "<p>No has escrito nada piyin</p>";
+        print "no tiene acceso";
     }
 ?>

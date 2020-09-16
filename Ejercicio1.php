@@ -12,7 +12,10 @@
     
 
     <form action="nom.php" method="POST" >
-        <input type="text" id= "nombre" name="nombre" />
+        nombre</br>
+        <input type="text" id= "nombre" name="nombre" /></br>
+        apellido</br>
+        <input type="text" id= "apellido" name="apellido" /></br>
         <input type="submit" value="Enviar"/>
     </form>
 
