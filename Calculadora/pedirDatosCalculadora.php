@@ -19,13 +19,12 @@
         </select>
         <input name="calcular" type="submit" value="Calcular"/>  
     </form>
-    
+
     <?php 
      if (isset($_POST['calcular'])) {
         $numero1 = $_POST['numero1'];
         $numero2 = $_POST['numero2'];
         $operacion = $_POST['operacion'];
-
         $resultado = 0;
         switch ($operacion) {
             case '1':
