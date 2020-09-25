@@ -8,13 +8,17 @@
 <body>
     <?php 
     $numerosPares = "";
-    for($i=5;$i<=50;$i++){
-        if(isset($i)&&$i%2==0){
-            $numerosPares = $numerosPares . $i.", ";
+    numerosPares();
+    print $numerosPares
+
+
+    function numerosPares(){
+        for($i=5;$i<=50;$i++){
+            if(isset($i)&&$i%2==0){
+                $numerosPares = $numerosPares . $i.", ";
+            }
         }
     }
-    print $numerosPares
-    
     ?>
 </body>
 </html>
