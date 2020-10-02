@@ -1,0 +1,14 @@
+<script>
+   var ano = parseInt(prompt("introduce un año deseado "));
+   
+   var fecha_indicada = new Date();
+   fecha_indicada.setFullYear(01,01,ano);
+   var fechaActual = Date.now();
+   var dias = fecha_indicada-fechaActual;
+  // document.write("Han pasado "+ fechaActual.diff(fecha_indicada, 'days')+" dias");
+   var dias= Math.floor((fecha_indicada-fechaActual)/ 8.64e7);
+   var horas= Math.floor((fecha_indicada-fechaActual)  % 8.64e7 / 3.6e6);
+   var minutos= Math.floor((fecha_indicada-fechaActual)% 3.6e6 / 6e4);
+   var segundos= Math.floor((fecha_indicada-fechaActual)% 6e4 / 1e3);
+   document.write("dias "+dias+" horas "+horas+" minutos "+minutos+" segundos "+segundos);
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numero = (Math.floor(Math.random(1,10)*10)+1);
+        console.log(numero);
+        var intentos = 0;
+        var acertado = false;
+        while (intentos <5 && acertado == false){
+            var intento = parseInt(prompt("Adivina el numero prueba "+intentos));
+            if (numero == intento){
+                document.write("Has acertado en el intento numero "+intentos+1);
+                acertado = true;
+            }else{
+                document.write("FALLASTE : vuelve a intentarlo");
+            }
+            intentos +=1;
+        }
+    </script>
+</body>
+</html>

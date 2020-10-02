@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+
+    </head>
+    <body>
+        <header></header>
+        <main></main>
+        <script>
+          var nacimiento = prompt("Intruduczca fecha de nacimiento (00/00/0000) :");
+          
+          var dia = nacimiento.substring(0,2);
+          var mes = nacimiento.substring(3,5);
+          var año = nacimiento.substring(6,10); 
+
+          var fechaN = new Date();
+          fechaN.setDate(dia);
+          fechaN.setMonth(mes-1);
+          fechaN.setYear(año);
+          
+          document.write("Su Fecha de nacimiento: "+fechaN+"</br>");
+
+          var fechaA = new Date();
+          document.write("Fecha  actual: "+fechaA+"</br>");
+          var edad = fechaA.getFullYear() - fechaN.getFullYear();
+          if ((fechaA.getMonth()<fechaN.getMonth()) || (fechaA.getMonth()==fechaN.getMonth()) && (fechaA.getDate()<fechaN.getDate())  ){
+              edad--;
+          }
+          
+          document.write("Usted tiene: "+edad+" años");
+         
+        </script>
+        <footer></footer>
+    </body>
+</html>

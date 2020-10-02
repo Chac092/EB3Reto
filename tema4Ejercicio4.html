@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Producto_alimenticio(codigo, nombre, precio) {
+            this.codigo = codigo;
+            this.nombre = nombre;
+            this.precio = precio;
+        }
+        var productos= new Array();
+        var producto1 = new Producto_alimenticio(1, "Manzana", 50);
+        var producto2 = new Producto_alimenticio(2, "Pasta", 10);
+        var producto3 = new Producto_alimenticio(33, "Carne", 90);
+        productos.push(producto1);
+        productos.push(producto2);
+        productos.push(producto3);
+
+        function imprimeDatos(){
+            document.write("El codigo del producto es "+ this.codigo + "el nombre es " + this.nombre + " y su precio es "+ this.precio + "€");
+        }
+        Producto_alimenticio.prototype.imprimir = imprimeDatos();
+        
+        for(var i=0;i<productos.length;i++){
+            var pro = productos[i];
+            pro.imprimir();
+        }
+
+    </script>
+</body>
+</html>

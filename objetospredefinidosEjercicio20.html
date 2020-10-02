@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fecha1 = new Date();
+        var  fechaIniciosegundos = fecha1.getSeconds();
+        var fechaIniciominutos = fecha1.getMinutes();
+        function aceptado(){
+            var fecha2 = new Date();
+            var fechaFinalsegundos = fecha2.getSeconds();
+            var fechaFinalminutos = fecha2.getMinutes();
+            var minutos = fechaFinalminutos-fechaIniciominutos;
+            minutos = minutos*60;
+            var segundos = (fechaFinalsegundos-fechaIniciominutos);
+            segundos += minutos;
+            document.write("Has tardado "+ segundos + " segundos")
+        }
+    </script>
+     
+    <label for="Nombre">Introduce tu nombre</label><br>
+    <input name= "nombre" type="text"/><br>
+    <button onclick="aceptado()">Aceptar</button>
+
+    <input type="button" name="cancelar">Cerrar</input>
+   
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      var numero1 = parseInt(prompt ("inserta el primer numero para calcular el maximo divisor comun "));
+      var numero2 = parseInt(prompt ("inserta el segundo numero para calcular el maximo divisor comun "));
+        divisor_maximo_comun(numero1,numero2);
+
+
+      function divisor_maximo_comun (numero1,numero2){
+        var divisores_de_numero1 = divisores(numero1);
+        console.log("divisores de numero 1"+divisores_de_numero1);
+        var divisores_de_numero2 = divisores(numero2);
+        console.log("divisores de numero 2"+divisores_de_numero2);
+        var divisores_comunes = [];
+
+        for(var i=0;divisores_de_numero1.length>i;i++){
+            for(var k=0;divisores_de_numero2.length>k;k++){
+                if(divisores_de_numero1[i]==divisores_de_numero2[k]){
+                    console.log("entro");
+                    divisores_comunes.push(divisores_de_numero1[i]);
+                }
+            }
+        }
+        var resultado = Math.max.apply(Math, divisores_comunes);;
+        console.log(resultado);
+        document.write(resultado);
+      }
+
+
+      function divisores (numero){
+          var divisoresdenumero = [];
+          for(var i=numero;i>0;i--){
+              if (numero%i==0){
+                divisoresdenumero.push(i);
+              }
+          }
+          return divisoresdenumero;
+      }
+    </script>
+</body>
+</html>

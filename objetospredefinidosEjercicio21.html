@@ -1,0 +1,8 @@
+<script>
+    var fecha_nacimiento = prompt("dime tu fecha de nacimiento(yyyy/mm/dd)");
+    var nacimiento =  new Date();
+    nacimiento.setFullYear(fecha_nacimiento.substring(0,4),fecha_nacimiento.substring(5,7),fecha_nacimiento.substring(8,10));
+    var fechaActual = new Date();
+    var años = fechaActual.getFullYear()-nacimiento.getFullYear();
+    document.write("Tienes "+ años + "Años");
+</script>
