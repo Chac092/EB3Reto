@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Fotos/estilo_main.css">
+</head>
+<body>
+    <h1>Productos de seguridad</h1>
+    <script>
+    
+        function Producto (codigo,nombre,tipo,rutaImagen,precio, link){
+            this.codigo=codigo;
+            this.nombre=nombre;
+            this.tipo = tipo;
+            this.rutaImagen = rutaImagen;
+            this.precio=precio;
+            this.link=link;
+        }
+        var productos = Array();
+        var producto1 = new Producto(1,"Alarma para casa","alarma","Fotos/alarma.jpg",50,"https://google.com");
+        productos.push(producto1);
+        var producto2 = new Producto(2,"Segunda cerradura","cerradura","Fotos/segundaCerradura.jpg",80,"https://google.com");
+        productos.push(producto2);
+
+        for(var i=0;i<productos.length;i++){
+            document.write("<div id='producto'>");
+            document.write("<img src='"+productos[i].rutaImagen+"'></img>");
+            document.write("<p>"+productos[i].nombre+"</p>");
+            document.write("<p class='precio'>"+productos[i].precio+" €</p>");
+            document.write("<form action='"+productos[i].link+"''>");
+            document.write(" <input type='submit' value='COMPRAR'/>");
+            document.write("</form>");         
+            document.write("</div>");
+        }   
+        </script>
+</body>
+</html>
