@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Limite: <input id="limite" type="number"/><br>
+    Texto: <textarea id="texto"></textarea><br>
+    Caracteres: <input id="caracteres_actuales" type="number"/><br>
+
+    <script>
+        var texto = document.getElementById("texto");
+        texto.addEventListener("keydown",accion);
+        function accion(){
+            var limite = document.getElementById("limite").value;
+            
+            if(limite != 0){
+              document.getElementById("texto").maxLength = limite;
+            }else{
+                alert("Porfavor introduzca un limite")
+            }
+            if (event.keyCode == 8){
+                document.getElementById("caracteres_actuales").value = document.getElementById("texto").value.length-1;
+            } else{
+                document.getElementById("caracteres_actuales").value = document.getElementById("texto").value.length;
+            }
+        }       
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function cambiarcolor(id){
+            //alert(document.getElementById(id).style.backgroundColor);
+            document.body.style.backgroundColor= document.getElementById(id).style.backgroundColor ;
+        }
+        var cuadrado_1 = document.getElementById("cuadrado_1"); 
+        var cuadrado_2 = document.getElementById("cuadrado_2"); 
+        var cuadrado_3 = document.getElementById("cuadrado_3"); 
+        var cuadrado_4 = document.getElementById("cuadrado_4"); 
+        var cuadrado_5 = document.getElementById("cuadrado_5"); 
+        
+        
+      </script>
+    <div id="cuadrado_1" onmousemove="cambiarcolor(this.id)" style="background-color: blue;width:500px;height: 500px;"></div>
+    <div id="cuadrado_2" onmousemove="cambiarcolor(this.id)" style="background-color: red;width:500px;height: 500px;"></div>
+    <div id="cuadrado_3" onmousemove="cambiarcolor(this.id)"  style="background-color: green;width:500px;height: 500px;"></div>
+    <div id="cuadrado_4" onmousemove="cambiarcolor(this.id)" style="background-color: black;width:500px;height: 500px;"></div>
+    <div id="cuadrado_5" onmousemove="cambiarcolor(this.id)" style="background-color: yellow;width:500px;height: 500px;"></div>
+
+
+
+    
+</body>
+</html>

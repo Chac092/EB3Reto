@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Manejando los objetos de chackbox</h1>
+    <h4>Selecciona las opciones deseadas</h4>
+    <form action="">
+        <input type="checkbox" id="opcion1" name="opciones" value="opcion1">
+        <label for="opcion1">opcion1</label><br>
+        <input type="checkbox" id="opcion2" name="opciones" value="opcion2">
+        <label for="opcion2">opcion2</label><br>
+        <input type="checkbox" id="opcion3" name="opciones" value="opcion3">
+        <label for="opcion3">opcion3</label><br>
+    </form>
+    <button id="enviar">Enviar</button>
+    <button id="limpiar">Limpiar</button>
+    <script>
+        var enviare = document.getElementById("enviar");
+        enviare.addEventListener("click", enviar);
+        var limpiar = document.getElementById("limpiar");
+        limpiar.addEventListener("click", limpieza);
+
+        function limpieza(){
+           location.reload();
+        }
+        function enviar(){
+            var checks = document.getElementsByName("opciones"), i;
+            var myWindow = window.open("", "MsgWindow", "width=200,height=100");
+            
+            for (i=0;i<checks.length;i++){
+                console.log("entro");
+                if (checks[i].checked){
+                    myWindow.document.write("<p>" + checks[i].value +"</p>");
+                } 
+            } 
+        }
+    </script>
+</body>
+</html>

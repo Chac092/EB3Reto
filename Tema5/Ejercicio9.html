@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="foto" style="width: 400px;height: 400px;"></div><br>
+    <button id="Repreoducir" onclick="intervalo()" >Reproducir</button>
+    <button id="Detener" onclick="detener()">Detener</button>
+    
+    <script>
+        var arrayfotos = new Array();
+        arrayfotos.push("'Fotos/banana.jpg'");
+        arrayfotos.push("'Fotos/fresa.png'");
+        arrayfotos.push("'Fotos/naranja.jpg'");
+        arrayfotos.push("'Fotos/manzana.jpg'");
+        var posicion_actual=0;
+        document.getElementById("foto").style.backgroundImage="url("+arrayfotos[posicion_actual]+")";
+        var interval;
+        function intervalo(){
+            interval = setInterval(llamada, 300);
+        }
+        function detener(){ clearInterval(interval); }
+
+        function llamada(){       
+            if(posicion_actual<arrayfotos.length-1){
+                posicion_actual += 1;
+                document.getElementById("foto").style.backgroundImage="url("+arrayfotos[posicion_actual]+")";
+            }else{
+                posicion_actual = 0;
+                document.getElementById("foto").style.backgroundImage="url("+arrayfotos[posicion_actual]+")";
+            }
+        } 
+        
+    </script>
+</body>
+</html>
