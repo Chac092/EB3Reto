@@ -35,8 +35,14 @@
         $conn = mysqli_connect($servername, $username, $password, $database);
         $consulta= "SELECT * FROM alumno";
         //mysql_query ($conn,$consulta);
-        $result[] = mysqli_query($conn, $consulta);
-        print_r ($result);
+        $result = mysqli_query($conn, $consulta);
+        
+        while($fila = mysqli_fetch_assoc($result)){
+            echo("<tr>
+                   <td>".$fila["Nombre"]."</td>
+                   <td>".$fila["Apellido"]."</td><br>
+                  </tr>\n");
+            }
     }
     conectarBD();
     imprimirTabla();
